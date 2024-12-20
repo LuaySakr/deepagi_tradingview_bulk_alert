@@ -17,9 +17,10 @@ chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--window-size=1420,1080')
 
 url = "https://www.tradingview.com"
-chrome_executable = Service(executable_path='/YOUR_CHROMEDRIVER_PATH/chromedriver', log_path='NUL')
-driver = webdriver.Chrome(service=chrome_executable)
+chrome_executable = Service(executable_path='/usr/local/bin/chromedriver', log_path='NUL')
+driver = webdriver.Firefox()#  webdriver.Chrome(service=chrome_executable)
 
+# time.sleep(600)
 driver.get(url)
 
 time.sleep(1)
